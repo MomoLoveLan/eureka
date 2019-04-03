@@ -27,4 +27,14 @@ public class OrderController {
     public List getUserList(){
         return orderService.getUserList();
     }
+
+    @GetMapping(value = "getUserTest")
+    public String getUserTest(){
+        return "我是order模块的getUserTest";
+    }
+
+    @GetMapping(value = "getHystrix")
+    public String getHystrix(){
+        return orderService.getHystrix();
+    }
 }

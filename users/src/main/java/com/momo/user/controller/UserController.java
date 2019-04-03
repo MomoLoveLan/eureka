@@ -26,6 +26,8 @@ public class UserController {
         List list = new ArrayList();
         list.add("abcd");
         list.add(serverPort);
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
         return list;
     }
     @GetMapping(value = "getUserTest")

@@ -1,6 +1,6 @@
 
 server:
-  port : 8001
+  port : 8012
 
 eureka:
   client:
@@ -9,4 +9,4 @@ eureka:
 
 spring:
   application:
-    name : eureka-order
+    name : eureka-user
