@@ -1,0 +1,12 @@
+
+server:
+  port : 8005
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://localhost:8000/eureka/ #服务注册到哪里去
+
+spring:
+  application:
+    name : eureka-order-feign
