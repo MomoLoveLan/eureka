@@ -23,7 +23,14 @@ public class UserController {
 
     @GetMapping(value = "getUserList")
     public List getUserList(){
-        List list = new ArrayList();
+
+        List list = null;
+        try {
+            Thread.sleep(3000);
+            list = new ArrayList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         list.add("abcd");
         list.add(serverPort);
         return list;

@@ -14,7 +14,8 @@
 * feign: 和Eureka结合，默认集成ribbon
 * zuul: 路由网关，路由转发和过滤器。
 zuul默认和ribbon结合实现了负载均衡的功能，类似于nginx转发。
-* Hystrix 服务容错保护机制，使用接口地址访问时可以实现熔断，使用zuul接口网关后悔失效。
+* Hystrix 服务容错保护机制，使用接口地址访问时可以实现熔断，使用zuul接口网关后会失效。
+* fallback服务降级
 #### 注意
 * 在定义zuul模块时不能以zuul为名，会有冲突。
 

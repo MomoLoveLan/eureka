@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableCircuitBreaker
+@EnableCircuitBreaker  //对hystrixR熔断机制的支持
 @EnableDiscoveryClient
 @EnableFeignClients
 public class OrderFeignApp {

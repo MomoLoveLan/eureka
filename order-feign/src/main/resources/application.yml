@@ -1,6 +1,8 @@
 
 server:
   port : 8005
+  tomcat:
+    max-threads: 50
 
 eureka:
   client:
@@ -10,3 +12,18 @@ eureka:
 spring:
   application:
     name : eureka-order-feign
+  main:
+    allow-bean-definition-overriding: true
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+

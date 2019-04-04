@@ -24,8 +24,7 @@ public class OrderFeignService {
     OrderFeignMapper orderFeignMapper;
 
     public List getUserList(){
-        List list = orderFeignMapper.getOrderByUserList();
-        //restTemplate.getMessageConverters()
+        List list = orderFeignMapper.getUserList();
         System.out.println("Feign 工程调用 user 成功");
         return list;
     }
@@ -37,6 +36,6 @@ public class OrderFeignService {
     }
 
     public String helloFallBack(){
-        return "error";
+        return orderFeignMapper.getError();
     }
 }
